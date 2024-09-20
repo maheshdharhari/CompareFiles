@@ -41,6 +41,3 @@ This project provides a Windows Forms application for comparing files in two dir
 ## License
 
 This project is licensed under the MIT License.
-```
-
-Feel free to adjust any details as needed!
