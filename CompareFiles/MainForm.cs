@@ -72,7 +72,7 @@ namespace CompareFiles
             return Task.FromResult(filesName);
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void buttonCopy_Click(object sender, EventArgs e)
         {
             if (!string.IsNullOrEmpty(textBoxResult.Text))
                 Clipboard.SetText(textBoxResult.Text);

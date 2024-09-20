@@ -138,7 +138,7 @@
             this.buttonCopy.Size = new System.Drawing.Size(75, 24);
             this.buttonCopy.TabIndex = 10;
             this.buttonCopy.UseVisualStyleBackColor = true;
-            this.buttonCopy.Click += new System.EventHandler(this.button4_Click);
+            this.buttonCopy.Click += new System.EventHandler(this.buttonCopy_Click);
             // 
             // MainForm
             // 
