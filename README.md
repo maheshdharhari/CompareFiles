@@ -2,6 +2,9 @@
 
 This project provides a Windows Forms application for comparing files in two directories based on specified file extensions. It allows users to browse directories, specify file types, and display comparison results.
 
+![image](https://github.com/user-attachments/assets/4a0d0b9c-1b2d-46e9-8995-9b7f0c2bbd09)
+
+
 ## Features
 
 - Browse and select two directories.
