@@ -2,7 +2,7 @@
 
 This project provides a Windows Forms application for comparing files in two directories based on specified file extensions. It allows users to browse directories, specify file types, and display comparison results.
 
-![image](https://res.cloudinary.com/maheshdharhari/image/upload/v1726815281/Blog/compareFilesInDirectories.png)
+![Running Project](https://res.cloudinary.com/maheshdharhari/image/upload/v1726815281/Blog/compareFilesInDirectories.png)
 
 
 ## Features
