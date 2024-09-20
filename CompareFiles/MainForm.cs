@@ -5,7 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace SearchFromReport
+namespace CompareFiles
 {
     public partial class MainForm : Form
     {
@@ -14,37 +14,37 @@ namespace SearchFromReport
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void buttonBrowse_Click(object sender, EventArgs e)
         {
             var openFileDialog1 = new FolderBrowserDialog();
 
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
-                textBox1.Text = openFileDialog1.SelectedPath;
+                textBoxFirstDirectoryPath.Text = openFileDialog1.SelectedPath;
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void buttonBrowseSecond_Click(object sender, EventArgs e)
         {
             var openFileDialog1 = new FolderBrowserDialog();
 
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
-                textBox2.Text = openFileDialog1.SelectedPath;
+                textBoxSecondDirectoryPath.Text = openFileDialog1.SelectedPath;
             }
         }
 
-        private async void button3_Click(object sender, EventArgs e)
+        private async void buttonCompare_Click(object sender, EventArgs e)
         {
-            var searchFilesInDirectory = await SearchFilesInDirectory(textBox1.Text, textBox2.Text);
+            var searchFilesInDirectory = await SearchFilesInDirectory(textBoxFirstDirectoryPath.Text, textBoxSecondDirectoryPath.Text);
             var searchString = string.Join(Environment.NewLine, searchFilesInDirectory.ToArray());
-            textBox4.Text = searchString;
+            textBoxResult.Text = searchString;
 
         }
 
         private async Task<IEnumerable<string>> SearchFilesInDirectory(string s, string s1)
         {
-            var searchPattern = !string.IsNullOrEmpty(textBox3.Text) ? "*." + textBox3.Text : "*.*";
+            var searchPattern = !string.IsNullOrEmpty(textBoxExtension.Text) ? "*." + textBoxExtension.Text : "*.*";
                 var firstDirSearch = await DirSearch(s, searchPattern);
                 var secondDirSearch = await DirSearch(s1, searchPattern);
                 var searchResult=firstDirSearch.Except(secondDirSearch);
@@ -74,8 +74,8 @@ namespace SearchFromReport
 
         private void button4_Click(object sender, EventArgs e)
         {
-            if (!string.IsNullOrEmpty(textBox4.Text))
-                Clipboard.SetText(textBox4.Text);
+            if (!string.IsNullOrEmpty(textBoxResult.Text))
+                Clipboard.SetText(textBoxResult.Text);
         }
     }
 }

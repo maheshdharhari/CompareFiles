@@ -1,4 +1,4 @@
-﻿namespace SearchFromReport
+﻿namespace CompareFiles
 {
     partial class MainForm
     {
@@ -29,16 +29,16 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.textBoxFirstDirectoryPath = new System.Windows.Forms.TextBox();
+            this.buttonBrowse = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.textBoxSecondDirectoryPath = new System.Windows.Forms.TextBox();
+            this.buttonBrowseSecond = new System.Windows.Forms.Button();
+            this.buttonCompare = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.button4 = new System.Windows.Forms.Button();
+            this.textBoxExtension = new System.Windows.Forms.TextBox();
+            this.textBoxResult = new System.Windows.Forms.TextBox();
+            this.buttonCopy = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -50,22 +50,22 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "&Directory";
             // 
-            // textBox1
+            // textBoxFirstDirectoryPath
             // 
-            this.textBox1.Location = new System.Drawing.Point(73, 19);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(375, 20);
-            this.textBox1.TabIndex = 1;
+            this.textBoxFirstDirectoryPath.Location = new System.Drawing.Point(73, 19);
+            this.textBoxFirstDirectoryPath.Name = "textBoxFirstDirectoryPath";
+            this.textBoxFirstDirectoryPath.Size = new System.Drawing.Size(375, 20);
+            this.textBoxFirstDirectoryPath.TabIndex = 1;
             // 
-            // button1
+            // buttonBrowse
             // 
-            this.button1.Location = new System.Drawing.Point(477, 19);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "&Browse";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.buttonBrowse.Location = new System.Drawing.Point(477, 19);
+            this.buttonBrowse.Name = "buttonBrowse";
+            this.buttonBrowse.Size = new System.Drawing.Size(75, 23);
+            this.buttonBrowse.TabIndex = 2;
+            this.buttonBrowse.Text = "&Browse";
+            this.buttonBrowse.UseVisualStyleBackColor = true;
+            this.buttonBrowse.Click += new System.EventHandler(this.buttonBrowse_Click);
             // 
             // label2
             // 
@@ -76,32 +76,32 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "D&irectory";
             // 
-            // textBox2
+            // textBoxSecondDirectoryPath
             // 
-            this.textBox2.Location = new System.Drawing.Point(73, 45);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(375, 20);
-            this.textBox2.TabIndex = 4;
+            this.textBoxSecondDirectoryPath.Location = new System.Drawing.Point(73, 45);
+            this.textBoxSecondDirectoryPath.Name = "textBoxSecondDirectoryPath";
+            this.textBoxSecondDirectoryPath.Size = new System.Drawing.Size(375, 20);
+            this.textBoxSecondDirectoryPath.TabIndex = 4;
             // 
-            // button2
+            // buttonBrowseSecond
             // 
-            this.button2.Location = new System.Drawing.Point(477, 45);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "B&rowse";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.buttonBrowseSecond.Location = new System.Drawing.Point(477, 45);
+            this.buttonBrowseSecond.Name = "buttonBrowseSecond";
+            this.buttonBrowseSecond.Size = new System.Drawing.Size(75, 23);
+            this.buttonBrowseSecond.TabIndex = 5;
+            this.buttonBrowseSecond.Text = "B&rowse";
+            this.buttonBrowseSecond.UseVisualStyleBackColor = true;
+            this.buttonBrowseSecond.Click += new System.EventHandler(this.buttonBrowseSecond_Click);
             // 
-            // button3
+            // buttonCompare
             // 
-            this.button3.Location = new System.Drawing.Point(477, 251);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 9;
-            this.button3.Text = "&Compare";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.buttonCompare.Location = new System.Drawing.Point(477, 251);
+            this.buttonCompare.Name = "buttonCompare";
+            this.buttonCompare.Size = new System.Drawing.Size(75, 23);
+            this.buttonCompare.TabIndex = 9;
+            this.buttonCompare.Text = "&Compare";
+            this.buttonCompare.UseVisualStyleBackColor = true;
+            this.buttonCompare.Click += new System.EventHandler(this.buttonCompare_Click);
             // 
             // label3
             // 
@@ -112,49 +112,49 @@
             this.label3.TabIndex = 6;
             this.label3.Text = "&Extension";
             // 
-            // textBox3
+            // textBoxExtension
             // 
-            this.textBox3.Location = new System.Drawing.Point(73, 74);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(375, 20);
-            this.textBox3.TabIndex = 7;
+            this.textBoxExtension.Location = new System.Drawing.Point(73, 74);
+            this.textBoxExtension.Name = "textBoxExtension";
+            this.textBoxExtension.Size = new System.Drawing.Size(375, 20);
+            this.textBoxExtension.TabIndex = 7;
             // 
-            // textBox4
+            // textBoxResult
             // 
-            this.textBox4.Location = new System.Drawing.Point(73, 101);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.ReadOnly = true;
-            this.textBox4.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox4.Size = new System.Drawing.Size(375, 173);
-            this.textBox4.TabIndex = 8;
+            this.textBoxResult.Location = new System.Drawing.Point(73, 101);
+            this.textBoxResult.Multiline = true;
+            this.textBoxResult.Name = "textBoxResult";
+            this.textBoxResult.ReadOnly = true;
+            this.textBoxResult.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.textBoxResult.Size = new System.Drawing.Size(375, 173);
+            this.textBoxResult.TabIndex = 8;
             // 
-            // button4
+            // buttonCopy
             // 
-            this.button4.BackgroundImage = global::CompareFiles.Properties.Resources.Iconsmind_Outline_File_Copy_2_16;
-            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button4.Location = new System.Drawing.Point(477, 221);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 24);
-            this.button4.TabIndex = 10;
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.buttonCopy.BackgroundImage = global::CompareFiles.Properties.Resources.Iconsmind_Outline_File_Copy_2_16;
+            this.buttonCopy.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.buttonCopy.Location = new System.Drawing.Point(477, 221);
+            this.buttonCopy.Name = "buttonCopy";
+            this.buttonCopy.Size = new System.Drawing.Size(75, 24);
+            this.buttonCopy.TabIndex = 10;
+            this.buttonCopy.UseVisualStyleBackColor = true;
+            this.buttonCopy.Click += new System.EventHandler(this.button4_Click);
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(564, 292);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.textBoxResult);
+            this.Controls.Add(this.buttonCopy);
+            this.Controls.Add(this.buttonCompare);
+            this.Controls.Add(this.buttonBrowseSecond);
+            this.Controls.Add(this.buttonBrowse);
+            this.Controls.Add(this.textBoxExtension);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.textBoxSecondDirectoryPath);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBoxFirstDirectoryPath);
             this.Controls.Add(this.label1);
             this.MaximizeBox = false;
             this.Name = "MainForm";
@@ -167,16 +167,16 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox textBoxFirstDirectoryPath;
+        private System.Windows.Forms.Button buttonBrowse;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.TextBox textBoxSecondDirectoryPath;
+        private System.Windows.Forms.Button buttonBrowseSecond;
+        private System.Windows.Forms.Button buttonCompare;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.TextBox textBoxExtension;
+        private System.Windows.Forms.TextBox textBoxResult;
+        private System.Windows.Forms.Button buttonCopy;
     }
 }
 
